@@ -20,3 +20,10 @@ jobs:
         run: |
           gem install awesome_bot
           awesome_bot README.md --allow-redirect --allow 503
+  Awesome_Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: npx awesome-lint
